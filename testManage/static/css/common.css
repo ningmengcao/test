@@ -1,0 +1,26 @@
+/*---------公用的样式---------*/
+/* flex布局 */
+.dis-flex-col{
+  display: flex;
+  flex-direction: column;
+}
+.dis-flex{
+  display: flex;
+}
+.dis-inline-flex{
+  display:inline-flex;
+}
+.flex-1{
+  flex: 1;
+}
+/*位置样式*/
+.align-center{
+  align-items: center;
+}
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+
