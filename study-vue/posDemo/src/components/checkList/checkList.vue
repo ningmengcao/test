@@ -13,7 +13,6 @@
         </div>
       </li>
     </el-badge>
-      <el-button round size = "small" class = "f-right"></el-button>
     </ul>
     <div v-if="!isCheckList" class = "text-center color-indianred">
       <h3>没有用户挂单</h3>

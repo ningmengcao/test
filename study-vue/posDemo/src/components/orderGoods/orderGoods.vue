@@ -22,6 +22,8 @@
 
       <div class="text-center">
         <el-button type="warning" @click="checkList(tableData)">挂单</el-button>
+        <el-button type="danger" @click="delAllGoods()">删除</el-button>
+        <el-button type="success" @click="checkout()"> 结账</el-button>
         <el-dialog title="用户挂单" :visible.sync="dialogTableVisible">
           <el-input  placeholder="请输入挂单编号"
                      v-model="checkListNumber"
@@ -29,8 +31,6 @@
                      clearable class = "margin-bottom-20"></el-input>
           <el-button type = "primary" @click="submitCheckList(tableData)">提交</el-button>
         </el-dialog>
-        <el-button type="danger" @click="delAllGoods()">删除</el-button>
-        <el-button type="success" @click="checkout()"> 结账</el-button>
       </div>
     </div>
 </template>

@@ -2,7 +2,7 @@
     <div class = "pos">
       <div>
         <el-row >
-          <el-col :span = "8"  id = "order-list" class = "pos-order padding-0-10">
+          <el-col :span = "10"  id = "order-list" class = "pos-order padding-0-10">
               <el-tabs v-model = "activeTabsName">
                 <el-tab-pane label = "点餐" name = "orderGoods">
 
@@ -31,11 +31,13 @@
 
                 </el-tab-pane>
 
-                <el-tab-pane label = "外卖" name = "takeOut">外卖</el-tab-pane>
+                <el-tab-pane label = "外卖" name = "takeOut">
+                  <take-out></take-out>
+                </el-tab-pane>
               </el-tabs>
           </el-col>
 
-          <el-col :span = "16" id = "goods-list" class = "goods">
+          <el-col :span = "14" id = "goods-list" class = "goods">
               <goods-list @addOrderList = "addOrderList"></goods-list>
           </el-col>
         </el-row>
@@ -47,9 +49,10 @@
 import goodsList from '@/components/common/goodsList'
 import orderGoods from '@/components/orderGoods/orderGoods'
 import CheckList from '@/components/checkList/checkList'
+import TakeOut from '../takeOut/takeOut'
 export default {
   name: 'Pos',
-  components: {CheckList, goodsList, orderGoods},
+  components: {TakeOut, CheckList, goodsList, orderGoods},
   data () {
     return {
       tableData: [],

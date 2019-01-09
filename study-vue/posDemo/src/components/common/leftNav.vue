@@ -30,12 +30,16 @@
       <el-menu
         background-color="#1D8ce0"
         text-color="#fff"
-        style = "height: 100%">
-        <el-menu-item index = "1">
-          <i class = "el_icon iconfont el-icon-pos-qian"></i>
+        active-text-color = "greenyellow"
+        :default-active = "navLabel"
+        @select="handleSelect"
+        style = "height: 100%"
+        >
+        <el-menu-item index = "/Pos">
+          <i class = "icon iconfont icon-qian"></i>
           <span>收银</span>
         </el-menu-item>
-        <el-menu-item index = "2">
+        <el-menu-item index = "/Shop">
           <i class = "icon iconfont icon-dianpu"></i>
           <span>店铺</span>
         </el-menu-item>
@@ -61,7 +65,19 @@
 
 <script>
 export default {
-  name: 'leftNav'
+  name: 'leftNav',
+  data () {
+    return {
+      navLabel: '/Pos'
+    }
+  },
+  methods: {
+    handleSelect (path) {
+      this.$router.push({
+        path: path
+      })
+    }
+  }
 }
 </script>
 
